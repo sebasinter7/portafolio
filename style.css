@@ -1,0 +1,46 @@
+:root {
+    --main-color: #242635;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--main-color);
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5rem 1.25rem;
+    background-color: transparent;
+}
+
+nav>div img{
+    width: 1.5rem;
+}
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+input#menu-hamburguesa~ul{
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 1rem;
+    width: 100%;
+    list-style: none;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    transition: all 300ms linear;
+}
+
+input#menu-hamburguesa:checked ~ ul{
+    right: 0;
+}
